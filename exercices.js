@@ -206,5 +206,5 @@ function longestConsecutiveElements(array) {
 var my_array1 = [1, 2, 3, 1, 2, 3, 4, 1];
 var my_array2 = [];
 
-var test =   longestConsecutiveElements(my_array1);
-console.log(test);
+var result =   longestConsecutiveElements(my_array1);
+console.log(result);
