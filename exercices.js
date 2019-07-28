@@ -31,6 +31,19 @@ function indexElement(my_array, value) {
 	return -1;
 }
 
-var my_array = [6, 3, 6, 6, 7, 7, 8, 3, 4];
-var result = indexElement(my_array, 20);
+function removeIndex(my_array, index) {
+	var result = [];
+	if (index >= my_array.length || index < 0) {
+		throw Error("Index out of boundries");
+	}
+	for(var i = 0; i < my_array.length; i++) {
+		if (index !== i) {
+			result.push(my_array[i]);
+		}
+	}
+	return result;
+}
+
+var my_array = [6, 3, 6];
+var result = removeIndex(my_array, 0);
 console.log(result);
