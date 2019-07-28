@@ -12,6 +12,25 @@ function average(my_array) {
 	return result; 
 }
 
+function contains(my_array, value) {
+	for (var i = 0; i < my_array.length; i++) {
+		if (value == my_array[i]) {
+			return true;
+		}
+	}
+	return false;
+}
+
+
+function indexElement(my_array, value) {
+	for(var i = 0; i < my_array.length; i++) {
+		if (my_array[i] == value) {
+			return i;
+		}
+	}
+	return false;
+}
+
 var my_array = [6, 3, 6, 6, 7, 7, 8, 3, 4];
-var result = average(my_array);
+var result = indexElement(my_array, 4);
 console.log(result);
