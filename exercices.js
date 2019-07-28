@@ -106,8 +106,48 @@ function commonElements(my_array1, my_array2) {
 	return result;
 }
 
-var my_array1 = [4, 4, 3, 10, 4, 15, 6, 7, 8, 9, 10];
-var my_array2 = [2, 10];
+function isElementInArray(value, my_array) {
+	for(var i = 0; i < my_array.length; i++){
+		if (value == my_array[i]) {
+			return true;
+		}
+	}
+	return false;
+}
 
-var result =  commonElements(my_array2, my_array1);
+
+function eliminerdouble(my_array) {
+	var result = [];
+	for(var i = 0; i < my_array.length; i++) {
+		var isValueInArray = isElementInArray(my_array[i], result);
+		if (!isValueInArray) {
+			result.push(my_array[i]);
+		}
+	}
+	return result;
+}
+
+function secondLargest(my_array) {
+	var max = my_array[0];
+	var secondMax = Number.MIN_SAFE_INTEGER;
+
+	for(var i = 0; i < my_array.length; i++) {
+		if (max < my_array[i]){
+			max = my_array[i];
+		}
+		if(secondMax < my_array[i] && my_array[i] <= max) {
+			secondMax = my_array[i];
+		}
+	}
+	return secondMax;
+} 
+
+
+
+
+
+var my_array1 = [-66, 3];
+var my_array2 = [];
+
+var result =  secondLargest(my_array1);
 console.log(result);
