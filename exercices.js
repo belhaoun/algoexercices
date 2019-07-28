@@ -52,6 +52,17 @@ function copyArray(my_array) {
 	return new_array;
 }
 
-var my_array = [6, 3, 6];
-var result = copyArray(my_array);
+function getMax(my_array) {
+	var max = my_array[0];
+	for(var i = 0; i < my_array.length; i++) {
+		if(max < my_array[i]) {
+			max = my_array[i];
+		}
+	}
+	return max;
+}
+
+
+var my_array = [6, 3, 8];
+var result = getMax(my_array);
 console.log(result);
