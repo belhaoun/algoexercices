@@ -72,6 +72,22 @@ function reverseArray(my_array) {
 }
 
 
-var my_array = [6, 3, 8];
-var result = reverseArray(my_array);
+function sortNumerique(my_array) {
+	for(var i = 0; i < my_array.length; i++) {
+		for(var j = i; j < my_array.length; j++){
+			if(my_array[j] < my_array[i]) {
+				var tmp = my_array[i];
+				my_array[i] = my_array[j];
+				my_array[j] = tmp;
+			}
+		}
+	}
+	return my_array;
+}
+
+
+
+var my_array = [4, 4, 3, 10, 4, 15, 6, 7, 8, 9, 10];
+
+var result = sortNumerique(my_array);
 console.log(result);
