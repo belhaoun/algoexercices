@@ -142,12 +142,23 @@ function secondLargest(my_array) {
 	return secondMax;
 } 
 
+function isEqualArray(array1, array2) {
+	if(array1.length != array2.length) {
+		return false;
+	}
+	for(var i = 0; i < array1.length; i++) {
+		if(my_array2[i] != my_array1[i]) {
+			return false;
+		}
+	}
+	return true;
+}
 
 
 
 
-var my_array1 = [-66, 3];
-var my_array2 = [];
+var my_array1 = [1, 3, 3, 4];
+var my_array2 = [1, 3, 5, 4];
 
-var result =  secondLargest(my_array1);
+var result =  isEqualArray(my_array2, my_array1);
 console.log(result);
