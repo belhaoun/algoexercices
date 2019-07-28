@@ -166,10 +166,23 @@ function countEvenOddArray(array) {
 	return result;
 } 
 
+function subArray(debut, fin ,array) {
+	var new_array = [];
+	if(debut < 0) {
+		debut = 0;
+	} else if(fin > array.length) {
+		fin = array.length;
+	}
+	for(var i = debut; i < fin; i++) {
+		new_array.push(array[i]);
+	}
+	return new_array;
+} 
 
 
-var my_array1 = [1, 3, 3, 4];
+
+var my_array1 = [1, 3, 3, 4, 2, 4, 5];
 var my_array2 = [];
 
-var result =  countEvenOddArray(my_array2);
+var result =   subArray(0, 2 ,my_array1);
 console.log(result);
