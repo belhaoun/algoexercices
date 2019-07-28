@@ -44,6 +44,14 @@ function removeIndex(my_array, index) {
 	return result;
 }
 
+function copyArray(my_array) {
+	var new_array = [];
+	for(var i = 0; i < my_array.length; i++) {
+		new_array.push(my_array[i]);
+	}
+	return new_array;
+}
+
 var my_array = [6, 3, 6];
-var result = removeIndex(my_array, 0);
+var result = copyArray(my_array);
 console.log(result);
