@@ -85,9 +85,17 @@ function sortNumerique(my_array) {
 	return my_array;
 }
 
-
+function displayGrid(nombreLigne, nombreColone) {
+	
+	for(var i = 0; i < nombreLigne; i++) {
+		var ligne = ""; 
+		for( var j = 0; j < nombreColone; j++) {
+			ligne += "-";
+		}
+		console.log(ligne);
+	}
+}
 
 var my_array = [4, 4, 3, 10, 4, 15, 6, 7, 8, 9, 10];
 
-var result = sortNumerique(my_array);
-console.log(result);
+displayGrid(3, 3);
