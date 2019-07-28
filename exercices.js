@@ -179,10 +179,32 @@ function subArray(debut, fin ,array) {
 	return new_array;
 } 
 
+function longestConsecutiveElements(array) {
+	var count = 1;
+	var result = 1;
+	var resulttempo = 0;
+	var new_array = [];
+	if(array.length == 0) {
+		return 0;
+	}
+	for(var i = 0; i < array.length; i++) {
+		if(array[i] <= array[i + 1]) {
+			count = count + 1;
+			resulttempo = count;
+			new_array.push(resulttempo);
+			result = getMax(new_array);
+		} else {
+			count = 1;
+		}
+	}
+	console.log(new_array);
+	return result;
+} 
 
 
-var my_array1 = [1, 3, 3, 4, 2, 4, 5];
+
+var my_array1 = [1, 2, 3, 1, 2, 3, 4, 1];
 var my_array2 = [];
 
-var result =   subArray(0, 2 ,my_array1);
+var result =   longestConsecutiveElements(my_array1);
 console.log(result);
