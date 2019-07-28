@@ -6,6 +6,12 @@ function sumArray(my_array) {
 	return sum;
 }
 
-var array = [10, 3, 10];
-var result = sumArray(array);
+function average(my_array) {
+	var sizeArray = my_array.length;
+	var result = sumArray(my_array) / sizeArray;
+	return result; 
+}
+
+var my_array = [6, 3, 6, 6, 7, 7, 8, 3, 4];
+var result = average(my_array);
 console.log(result);
