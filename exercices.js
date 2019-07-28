@@ -63,6 +63,15 @@ function getMax(my_array) {
 }
 
 
+function reverseArray(my_array) {
+	var result= [];
+	for(i = my_array.length - 1; i >= 0; i--) {
+		result.push(my_array[i]);
+	}
+	return result;
+}
+
+
 var my_array = [6, 3, 8];
-var result = getMax(my_array);
+var result = reverseArray(my_array);
 console.log(result);
