@@ -28,9 +28,9 @@ function indexElement(my_array, value) {
 			return i;
 		}
 	}
-	return false;
+	return -1;
 }
 
 var my_array = [6, 3, 6, 6, 7, 7, 8, 3, 4];
-var result = indexElement(my_array, 4);
+var result = indexElement(my_array, 20);
 console.log(result);
