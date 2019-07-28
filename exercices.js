@@ -154,11 +154,22 @@ function isEqualArray(array1, array2) {
 	return true;
 }
 
+function countEvenOddArray(array) {
+	var result = {even : 0, odd : 0};
+	for (var i = 0; i < array.length; i++) {
+		if(array[i] % 2 === 0) {
+			result.odd++;
+		} else {
+			result.even++
+		}
+	}
+	return result;
+} 
 
 
 
 var my_array1 = [1, 3, 3, 4];
-var my_array2 = [1, 3, 5, 4];
+var my_array2 = [];
 
-var result =  isEqualArray(my_array2, my_array1);
+var result =  countEvenOddArray(my_array2);
 console.log(result);
