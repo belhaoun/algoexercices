@@ -86,7 +86,6 @@ function sortNumerique(my_array) {
 }
 
 function displayGrid(nombreLigne, nombreColone) {
-	
 	for(var i = 0; i < nombreLigne; i++) {
 		var ligne = ""; 
 		for( var j = 0; j < nombreColone; j++) {
@@ -96,6 +95,19 @@ function displayGrid(nombreLigne, nombreColone) {
 	}
 }
 
-var my_array = [4, 4, 3, 10, 4, 15, 6, 7, 8, 9, 10];
+function commonElements(my_array1, my_array2) {
+	var result = [];
+	for(var i = 0; i < my_array1.length; i++) {
+		for(var j = 0; j < my_array2.length ; j++)
+			if (my_array1[i] == my_array2[j]) {
+				result.push(my_array1[i]);
+			}
+	}
+	return result;
+}
 
-displayGrid(3, 3);
+var my_array1 = [4, 4, 3, 10, 4, 15, 6, 7, 8, 9, 10];
+var my_array2 = [2, 10];
+
+var result =  commonElements(my_array2, my_array1);
+console.log(result);
