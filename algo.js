@@ -9,18 +9,45 @@ function exercise(input) {
         for (var j = 0; j < input.length; j++) {
             if(i != j) {
                 result += input[j]; 
-            } 
-            
+            }        
         }
         tab.push(result);
     }
-    
     return tab;
 }
+
+
+
+function exercise1(input) {
+    var tab = [];
+    var result = 0; 
+    var sum = 0; 
+
+    for (var i = 0; i < input.length; i++) {
+        sum += input[i];
+    }
+
+    for (var i = 0; i < input.length; i++) {
+        result = sum - input[i];
+        tab.push(result);
+    }
+    return tab;
+}
+
+
+
 
 
 var result = exercise([1, 2, 3]);
 console.log("[5, 4, 3] : ", result);
 
 result = exercise([2, 6, 4, 1, 2]);
+console.log("[13, 9, 11, 14, 13] : ", result);
+
+
+
+var result = exercise1([1, 2, 3]);
+console.log("[5, 4, 3] : ", result);
+
+result = exercise1([2, 6, 4, 1, 2]);
 console.log("[13, 9, 11, 14, 13] : ", result);
