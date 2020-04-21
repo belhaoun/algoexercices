@@ -1,5 +1,8 @@
-//[1, 2, 3] -> [6, 3, 2]
-// [2, 6, 4, 1, 2] -> [48, 16, 24, 96, 13]
+//[1, 2, 3] -> [1, 2, 3]
+// [2, 6, 4, 1, 2] -> [1, 2, 2, 4, 6]
+// compareArray([1, 2, 3], [1, 2, 3]) : true
+// compareArray([1, 2, 3], [1, 2, 2]) : false
+// compareArray([1, 2, 3], [1, 2]) : false
 
 
 
@@ -46,8 +49,44 @@ function exercise2(input) {
     return tab;
 }
 
+var inpute1 = [1, 2];
+var inpute2 = [3, 1, 2, 2];
+var inpute3 = [2, 6, 4, 1, 2];
+
+console.log (inpute2.length);
 
 
+function compareArray(inpute1, inpute2) {
+    if (inpute1.length !== inpute2.length){
+        return false;
+    }
+
+    for (i = 0; i < inpute1.length; i++) {
+        if (inpute1[i] != inpute2[i]) {
+            return false;
+        }
+    } 
+    return true;
+}
+
+function tri(input) {
+    var tmp;
+    for (var i = 0; i < input.length; i++) {
+        for(var j = 0; j < input.length; j++) {
+            if (input[i] < input[j]) {
+                tmp = input[i];
+                input[i] = input[j];
+                input[j] = tmp;
+            }
+        }
+    }
+    return input;
+}
+
+console.log(tri(inpute3));
+
+
+console.log(compareArray(inpute1, inpute2));
 
 var result = exercise([1, 2, 3]);
 console.log("[5, 4, 3] : ", result);
